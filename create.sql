@@ -1,18 +1,18 @@
-create table publisher(
-    id integer primary key,
-    name text not null,
-    country text not null
+CREATE TABLE publisher(
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    country TEXT NOT NULL
 );
-create table books(
-    id integer primary key,
-    title text not null,
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
     publisher integer references publisher(id)
 );
-create table subjects(
-    id integer primary key,
-    name text not null
+CREATE TABLE subjects(
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL
 );
-create table books_subjects(
-    book integer references books(id),
-    subject integer references subjects(id)
+CREATE TABLE books_subjects(
+    book INTEGER REFERENCES BOOK(id),
+    subject INTEGER REFERENCES SUBJECTS(id)
 );
