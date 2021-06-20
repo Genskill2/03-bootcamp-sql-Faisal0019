@@ -13,6 +13,6 @@ CREATE TABLE subjects(
     name TEXT NOT NULL
 );
 CREATE TABLE books_subjects(
-    book INTEGER REFERENCES BOOK(id),
-    subject INTEGER REFERENCES SUBJECTS(id)
+    book INTEGER REFERENCES books(id),
+    subject INTEGER REFERENCES subjects(id)
 );
